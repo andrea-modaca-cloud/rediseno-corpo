@@ -1,15 +1,18 @@
-# Fase 1: Idea del Proyecto - Rediseño CMVA
+# Fase 1: Idea del Proyecto - Rediseño CMVA 2026
 
-**¿Qué quiero lograr?**
-Actualizar el sitio web de la Corporación para que refleje una institución moderna, transparente y eficiente. El sitio actual necesita una limpieza visual y una mejor organización de sus módulos (Salud, Educación, etc.).
+## 🏥 Contexto Institucional
+La Corporación Municipal (CMVA) busca renovar su plataforma digital de Salud para proyectar una imagen de modernidad, eficiencia y cercanía ciudadana. No se trata solo de un cambio estético, sino de una transformación en la forma en que la ciudadanía accede a la salud pública primaria.
 
-**Público objetivo:**
-Funcionarios de la corporación y, principalmente, los ciudadanos de Villa Alemana.
+## 🎯 Objetivos Estratégicos (Propuesta 2026)
+- **Confianza Ciudadana:** Crear una experiencia que inspire compromiso con la salud pública.
+- **Modernización UX/UI:** Implementar tendencias 2026 (diseño limpio, jerarquía visual, microinteracciones).
+- **Contenido Audiovisual:** Optimizar el sitio para integrar videos educativos, testimonios y tours 360° sin sacrificar velocidad.
+- **Accesibilidad Universal:** Cumplir con los estándares WCAG AA para garantizar el acceso a todos los usuarios.
 
-**Puntos de dolor a resolver:**
-- Navegación confusa.
-- Estética anticuada.
-- Lentitud en la carga de documentos importantes (PDFs de actas, convenios, etc.).
+## 👥 Público Objetivo
+- Ciudadanía en general (búsqueda de información y trámites).
+- Usuarios de la Red de Salud (CESFAM Lusitania, Gómez Carreño, etc.).
+- Funcionarios y Personal de Salud.
 
-**Sinergia con el Entorno:**
-Este proyecto utilizará las herramientas de la carpeta `3_Skills_Herramientas` (como MarkItDown) para procesar contenidos antiguos y el estilo de las firmas generadas en `Automatizacion_Funciones_Laborales` para mantener la coherencia de marca.
+## 🏁 Alcance (Versión 1.0)
+El proyecto entregará un sitio funcional desarrollado en **Next.js 14**, con secciones de Salud, Programas Estratégicos, Ciudadanía, Noticias y Contacto. Se priorizará la integración con servicios externos como Google Maps y portales de agendamiento.

@@ -1,14 +1,24 @@
-# Fase 2: Análisis de Implementación
+# Fase 2: Análisis de Implementación - CMVA 2026
 
-**Propuesta Tecnológica:**
-- Frontend: HTML5, CSS3 moderno (Glassmorphism, Flexbox, Grid).
-- Posible uso de frameworks como Vite o Next.js si se requiere mayor complejidad.
+## 🏗️ Arquitectura de Información
+El sitio se divide en una estructura clara y jerárquica:
+- **INICIO:** Hero audiovisual, servicios destacados, noticias y acceso rápido.
+- **SALUD:** Directorio de CESFAM (Lusitania, Baeza Bustos, etc.) con mapas y horarios.
+- **PROGRAMAS:** Línea de tiempo de hitos institucionales (Acreditación, PrEP VIH).
+- **CIUDADANÍA:** Preguntas frecuentes, formularios descargables y chatbot de atención.
 
-**Secciones Críticas del Sitio:**
-1. Inicio (Banner de noticias y trámites destacados).
-2. Área de Salud (Farmacia comunal, centros de atención).
-3. Área de Educación (Colegios, programas).
-4. Transparencia (Repositorio de documentos y actas).
+## 🎨 Identidad Visual y Diseño
+- **Paleta de Colores:** Azul Institucional (`#0055BB`) y Verde Salud (`#00A86B`) sobre fondos limpios (`#F5F5F5`).
+- **Tipografía:** Poppins/Inter para títulos y Open Sans para cuerpo, optimizando legibilidad y carga.
+- **Multimedia:** Uso de formatos WebP/MP4 comprimidos (máx 2MB por video) y Lazy Loading.
 
-**Inspiración:**
-Diseños limpios, uso de colores blanco, rojo y verde (colores corporativos de la CMVA).
+## 🛠️ Stack Tecnológico Seleccionado
+- **Framework:** Next.js 14+ (App Router).
+- **Estilos:** Tailwind CSS 3+.
+- **Componentes:** Shadcn/ui (basado en Radix UI para accesibilidad).
+- **Animaciones:** Framer Motion para transiciones sutiles (300ms).
+- **Hosting:** Vercel (recomendado para performance y SEO).
+
+## ⚡ Rendimiento y SEO
+- **Metas Técnicas:** LCP < 2.5s, CLS < 0.1.
+- **SEO:** Marcado Schema (HealthCare), meta-etiquetas dinámicas por página y Sitemap optimizado.
