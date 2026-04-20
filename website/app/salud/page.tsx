@@ -9,38 +9,43 @@ export default function SaludPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-slate-50">
-      <div className="bg-primary-blue py-20 text-white">
-        <div className="max-w-6xl mx-auto px-8">
-          <h1 className="text-4xl font-black mb-4">Área de Salud</h1>
-          <p className="text-blue-100 max-w-2xl">
+    <main className="min-h-screen bg-slate-50 pt-20">
+      <div className="bg-black py-24 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-primary-red/10 animate-pulse"></div>
+        <div className="max-w-6xl mx-auto px-8 relative z-10">
+          <h1 className="text-5xl font-black mb-6">Salud Pública</h1>
+          <p className="text-slate-400 max-w-2xl text-lg font-medium">
             Gestionamos la Red de Atención Primaria de Salud de la comuna, brindando servicios de calidad y cercanía a todos nuestros vecinos.
           </p>
         </div>
       </div>
 
-      <section className="py-20 max-w-6xl mx-auto px-8">
-        <h2 className="text-2xl font-bold mb-10 text-gray-800">Centros de Salud Familiar (CESFAM)</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className="py-24 max-w-6xl mx-auto px-8">
+        <div className="flex justify-between items-end mb-16">
+          <h2 className="text-3xl font-black text-black">Centros de Salud Familiar (CESFAM)</h2>
+          <span className="text-primary-red font-bold text-sm uppercase tracking-widest cursor-pointer hover:underline">Ver todos en mapa →</span>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {centros.map((c, i) => (
-            <div key={i} className="bg-white p-8 rounded-3xl shadow-sm border border-slate-200 hover:shadow-md transition-all">
-              <div className="flex justify-between items-start mb-6">
+            <div key={i} className="bg-white p-10 rounded-[3rem] shadow-xl shadow-slate-200/50 border border-slate-100 hover:shadow-2xl transition-all group">
+              <div className="flex justify-between items-start mb-8">
                 <div>
-                  <h3 className="text-xl font-black text-primary-blue">{c.name}</h3>
-                  <p className="text-sm text-gray-500 mt-1">📍 {c.addr}</p>
+                  <h3 className="text-2xl font-black text-black group-hover:text-primary-red transition-colors">{c.name}</h3>
+                  <p className="text-sm text-slate-500 mt-2 font-medium flex items-center gap-2">📍 {c.addr}</p>
                 </div>
-                <span className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase ${c.status === 'Acreditado' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'}`}>
+                <span className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-wider ${c.status === 'Acreditado' ? 'bg-green-100 text-green-700' : 'bg-primary-gold/20 text-black'}`}>
                   {c.status}
                 </span>
               </div>
               <div className="flex gap-4">
-                <button className="flex-1 bg-primary-blue text-white py-3 rounded-xl text-sm font-bold">Agendar Cita</button>
-                <button className="flex-1 border border-slate-200 py-3 rounded-xl text-sm font-bold hover:bg-slate-50">Ver Mapa</button>
+                <button className="flex-1 bg-black text-white py-4 rounded-2xl text-sm font-black hover:bg-primary-red transition-all shadow-lg shadow-black/10">Agendar Cita</button>
+                <button className="flex-1 border-2 border-slate-100 py-4 rounded-2xl text-sm font-bold hover:bg-slate-50 transition-all">Ver Detalles</button>
               </div>
             </div>
           ))}
         </div>
       </section>
     </main>
+
   );
 }

@@ -9,27 +9,27 @@ export default function ProgramasPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-white">
-      <div className="bg-primary-green py-20 text-white">
+    <main className="min-h-screen bg-white pt-20">
+      <div className="bg-black py-24 text-white">
         <div className="max-w-6xl mx-auto px-8">
-          <h1 className="text-4xl font-black mb-4">Programas Estratégicos</h1>
-          <p className="text-green-500 bg-white/10 inline-block px-4 py-1 rounded text-sm font-bold mb-4">Gestión 2023-2026</p>
+          <span className="text-primary-gold font-black text-xs uppercase tracking-[0.2em] mb-4 inline-block">Plan Estratégico</span>
+          <h1 className="text-5xl font-black">Nuestra Gestión</h1>
         </div>
       </div>
 
-      <section className="py-20 max-w-4xl mx-auto px-8">
+      <section className="py-24 max-w-4xl mx-auto px-8">
         <div className="space-y-12">
           {hitos.map((h, i) => (
             <div key={i} className="flex gap-8 group">
               <div className="flex flex-col items-center">
-                <div className="w-12 h-12 rounded-full bg-primary-green flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform shadow-lg">
+                <div className="w-16 h-16 rounded-2xl bg-black border-2 border-primary-gold flex items-center justify-center text-primary-gold font-black text-xl group-hover:bg-primary-red group-hover:border-primary-red group-hover:text-white transition-all shadow-xl">
                   {h.year.slice(2)}
                 </div>
-                {i !== hitos.length - 1 && <div className="w-1 h-full bg-slate-100 my-2"></div>}
+                {i !== hitos.length - 1 && <div className="w-1 h-full bg-slate-100 my-4"></div>}
               </div>
               <div className="pb-12 border-b border-slate-50 w-full">
-                <h3 className="text-xl font-black text-gray-900 mb-2">{h.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm">{h.desc}</p>
+                <h3 className="text-2xl font-black text-black mb-3">{h.title}</h3>
+                <p className="text-slate-500 leading-relaxed font-medium">{h.desc}</p>
               </div>
             </div>
           ))}

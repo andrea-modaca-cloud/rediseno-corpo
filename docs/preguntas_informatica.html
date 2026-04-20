@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud Técnica para TI - Portal CMVA 2026</title>
+    <style>
+        :root {
+            --primary-black: #000000;
+            --primary-red: #E30613;
+            --primary-gold: #FFED00;
+            --bg-gray: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-gray);
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-black);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 6px solid var(--primary-red);
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-black) 33.3%, var(--primary-red) 33.3%, var(--primary-red) 66.6%, var(--primary-gold) 66.6%);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -30px auto 50px;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            shadow: 0 20px 50px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 { margin: 0; font-size: 2.5rem; font-weight: 900; letter-spacing: -1px; }
+        h2 { color: var(--primary-red); border-bottom: 2px solid var(--primary-gold); padding-bottom: 10px; margin-top: 40px; font-weight: 800; }
+        
+        .intro { font-size: 1.1rem; color: #666; margin-bottom: 30px; }
+        
+        .question-card {
+            background: #fff;
+            border-left: 5px solid var(--primary-black);
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 0 15px 15px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+
+        .question-card:hover {
+            transform: translateX(10px);
+            border-left-color: var(--primary-red);
+        }
+
+        .question-title {
+            font-weight: 900;
+            color: var(--primary-black);
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .question-desc {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #eee;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .tag-it { background: var(--primary-black); color: white; }
+        .tag-dev { background: var(--primary-gold); color: black; }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .cta-box {
+            background: #fdfdfd;
+            border: 2px dashed var(--primary-gold);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .cta-box p { font-weight: bold; font-style: italic; color: #444; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Solicitud de Infraestructura</h1>
+        <p>Departamento de Comunicaciones CMVA</p>
+    </header>
+
+    <div class="container">
+        <p class="intro">
+            Como equipo de Comunicaciones, estamos desarrollando una nueva plataforma institucional moderna basada en <strong>Next.js 16</strong>. Para garantizar su funcionamiento, necesitamos clarificar los requerimientos técnicos con el departamento de Informática más allá del entorno actual de WordPress.
+        </p>
+
+        <h2>💻 Infraestructura y Runtime</h2>
+        
+        <div class="question-card">
+            <span class="tag tag-it">Entorno</span>
+            <span class="question-title">1. ¿El servidor actual soporta Node.js y ejecución en el lado del servidor (SSR)?</span>
+            <span class="question-desc">Nuestra web requiere Node.js v18+. En caso negativo, ¿podemos optar por un despliegue mediante Docker?</span>
+        </div>
+
+        <div class="question-card">
+            <span class="tag tag-it">Hosting</span>
+            <span class="question-title">2. ¿Es posible habilitar un espacio para aplicaciones custom fuera de WP?</span>
+            <span class="question-desc">WP es limitado para el tipo de micro-interacciones y sistemas de agendamiento personalizados que estamos construyendo.</span>
+        </div>
+
+        <h2>🚀 Despliegue y CI/CD</h2>
+
+        <div class="question-card">
+            <span class="tag tag-dev">Pipeline</span>
+            <span class="question-title">3. ¿Cuál es el protocolo permitido para el despliegue de código?</span>
+            <span class="question-desc">¿Podemos utilizar repositorios privados de GitHub con Actions para automatizar el despliegue (CI/CD) o debemos pasar por un FTP/SFTP manual?</span>
+        </div>
+
+        <div class="question-card">
+            <span class="tag tag-dev">Variables</span>
+            <span class="question-title">4. ¿Cómo se gestionan las variables de entorno (.env) en sus servidores?</span>
+            <span class="question-desc">Necesitamos configurar APIs secretas para el sistema de mapas y el chatbot sin que el código sea público.</span>
+        </div>
+
+        <h2>🔒 Seguridad y Datos</h2>
+
+        <div class="question-card">
+            <span class="tag tag-it">SSL</span>
+            <span class="question-title">5. ¿Contamos con certificados SSL (HTTPS) automatizados?</span>
+            <span class="question-desc">Para la seguridad de los datos de salud de los vecinos, el sitio debe ser estrictamente HTTPS.</span>
+        </div>
+
+        <div class="question-card">
+            <span class="tag tag-it">DB</span>
+            <span class="question-title">6. ¿Existe disponibilidad de base de datos relacional (PostgreSQL)?</span>
+            <span class="question-desc">El sistema de agendamiento requiere una base de datos más robusta que la que utiliza WordPress estándar.</span>
+        </div>
+
+        <div class="cta-box">
+            <p>"El objetivo es elevar el estándar digital de la Corporación Municipal, pasando de un blog a una plataforma de servicios de primer nivel."</p>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 Depto. Comunicaciones CMVA | Villa Alemana
+    </footer>
+
+</body>
+</html>
